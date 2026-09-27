@@ -8,6 +8,8 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    expose:
+      - 5432
 
   n8n:
     image: docker.n8n.io/n8nio/n8n
